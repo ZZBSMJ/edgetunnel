@@ -190,7 +190,7 @@ export default {
                 }
 
                 SCV = env.SCV || SCV;
-                if (!SCV || SCV == '0' || SCV == 'false') allowInsecure = '';
+                if (!SCV || SCV == '0' || SCV == 'false') allowInsecure = '&allowInsecure=0';
                 else SCV = 'true';
                 const 路径 = url.pathname.toLowerCase();
                 if (路径 == '/') {
@@ -5848,4 +5848,5 @@ async function 解析地址端口(proxyIP) {
     return [地址, 端口];
 
 }
+
 
